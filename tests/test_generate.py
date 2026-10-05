@@ -36,10 +36,10 @@ def test_build_writes_expected_file(test_font: Path, tmp_path: Path) -> None:
         font=test_font,
         height=32,
         out_dir=tmp_path,
-        slug="ibm3161",
+        slug="ibm3270",
     )
     assert out.is_file()
-    assert out.name.startswith("ibm3161-")
+    assert out.name.startswith("ibm3270-")
     assert out.name.endswith("x32.psfu")
 
 
@@ -48,7 +48,7 @@ def test_build_psf2_header(test_font: Path, tmp_path: Path) -> None:
         font=test_font,
         height=32,
         out_dir=tmp_path,
-        slug="ibm3161",
+        slug="ibm3270",
     )
     data = out.read_bytes()
     (
@@ -76,7 +76,7 @@ def test_build_explicit_glyph_count(test_font: Path, tmp_path: Path) -> None:
         font=test_font,
         height=32,
         out_dir=tmp_path,
-        slug="ibm3161",
+        slug="ibm3270",
         glyph_count=256,
     )
     data = out.read_bytes()
@@ -169,7 +169,7 @@ def test_cli_end_to_end(test_font: Path, tmp_path: Path) -> None:
             "--font",
             str(test_font),
             "--slug",
-            "ibm3161",
+            "ibm3270",
             "--out",
             str(tmp_path),
         ],
@@ -177,4 +177,4 @@ def test_cli_end_to_end(test_font: Path, tmp_path: Path) -> None:
         text=True,
     )
     assert result.returncode == 0, result.stderr
-    assert list(tmp_path.glob("ibm3161-*x32.psfu"))
+    assert list(tmp_path.glob("ibm3270-*x32.psfu"))
