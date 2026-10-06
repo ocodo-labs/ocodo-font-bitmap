@@ -6,6 +6,7 @@ e.g. ocodo-mono-dotzero-13x24.psfu
 
 - from https://github.com/ocodo-labs/ocodo-mono-dotzero-bitmap/releases/tag/1.0.2 
   - https://github.com/ocodo-labs/ocodo-mono-dotzero-bitmap/releases/download/1.0.2/ocodo-mono-dotzero-13x24.psfu
+  - Note if you are on a 4k TV at couch distance 60px Y/Height is good. 
 
 The general process is:
 
